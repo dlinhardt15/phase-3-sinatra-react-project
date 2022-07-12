@@ -12,4 +12,8 @@ class ApplicationController < Sinatra::Base
     dish.to_json
   end
 
+  delete "/dishes/:id" do
+    dish = Dish.find(params[:id]).destroy
+    dish.to_json
+  end
 end
