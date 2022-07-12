@@ -1,5 +1,9 @@
 puts "🌱 Seeding spices..."
 
+Spice.destroy_all
+Cuisine.destroy_all
+Dish.destroy_all
+
 # Seed your database here
 Spice.create(name: "Cumin", flavor_profile: "Slightly sweet, warming flavour with a nutty element.")
 Spice.create(name: "Red Pepper Flakes", flavor_profile: "Slightly sharp and a little earthy with a decent dose of spicy.")
@@ -22,5 +26,5 @@ Dish.create(name: "Chicken Biryani", description: "A savory chicken and rice dis
 Dish.create(name: "Pepper Steak", description: "A combination of sauteed bell peppers, browned steak and a savory sauce.", image: "https://www.carriesexperimentalkitchen.com/wp-content/uploads/2015/02/Beef-Green-Bean-Stirfry-2-256x256.jpg", spice_id: 4, cuisine_id: 3)
 Dish.create(name: "Seolleongtang", description: "Milky beef bone soup that's made by boiling down ox leg bones for several hours until the broth becomes rich and creamy white.", image: "https://contents.lotteon.com/itemimage/LO/13/86/53/81/23/_1/38/65/38/12/4/LO1386538123_1386538124_1.jpg/dims/resize/256x256", spice_id: 4, cuisine_id: 2)
 Dish.create(name: "Lasagna", description: "Layered casserole of meat, cheese, and sauce.", image: "https://photos.bigoven.com/recipe/hero/kraft-lasagna-0945ff906530cd75cb5afa6f.jpg?h=300&w=300", spice_id: 5, cuisine_id: 1)
-Dish.create(name: "Tuscan Bean Stew", description: "Hearty stew with rustic Italian flavors.", image: "https://i.pinimg.com/564x/b6/bb/ab/b6bbab5cad03979b58072c1f3fcbc973.jpg", spice_id: 5, cuisine_id: 1)
+Dish.create(name: "Tuscan Bean Stew", description: "Hearty stew with rustic Italian flavors.", image: "https://www.carriesexperimentalkitchen.com/wp-content/uploads/2017/10/Tuscan.White-Bean-Soup3-256x256.jpg", spice_id: 5, cuisine_id: 1)
 puts "✅ Done seeding!"
