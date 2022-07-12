@@ -7,4 +7,9 @@ class ApplicationController < Sinatra::Base
     dishes.to_json
   end
 
+  post "/dishes" do
+    dish = Dish.create(name: params[:name], description: params[:description], image: params[:image], spice_id: params[:spice_id], cuisine_id: params[:cuisine_id])
+    dish.to_json
+  end
+
 end
