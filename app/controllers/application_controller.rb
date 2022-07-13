@@ -16,4 +16,20 @@ class ApplicationController < Sinatra::Base
     dish = Dish.find(params[:id]).destroy
     dish.to_json
   end
+
+  patch "/dishes/:id" do
+    dish = Dish.find(params[:id])
+    dish.update(description: params[:description])
+    dish.to_json
+  end
+
+  get "/cuisines" do
+    cuisines = Cuisine.all
+    cuisines.to_json
+  end
+
+  post "/cuisines" do
+    cuisine = Cuisine.create(name: params[:name])
+    cuisine.to_json
+  end
 end
