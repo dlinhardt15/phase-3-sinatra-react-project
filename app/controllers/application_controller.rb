@@ -32,4 +32,9 @@ class ApplicationController < Sinatra::Base
     cuisine = Cuisine.create(name: params[:name])
     cuisine.to_json
   end
+
+  get "/spices" do
+    spices = Spice.all
+    spices.to_json
+  end
 end
