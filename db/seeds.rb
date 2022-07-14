@@ -1,8 +1,5 @@
 puts "🌱 Seeding spices..."
 
-Spice.destroy_all
-Cuisine.destroy_all
-Dish.destroy_all
 
 # Seed your database here
 Spice.create(name: "Cumin", flavor_profile: "Slightly sweet, warming flavour with a nutty element.")
